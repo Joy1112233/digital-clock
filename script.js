@@ -17,6 +17,10 @@ minutes = minutes < 10 ? '0' + minutes : minutes;
 let seconds = now.getSeconds();
 seconds = seconds < 10 ? '0' + seconds : seconds;
 document.querySelector('.second').textContent = seconds;
+
+// day calculation
+const dayName = now.toLocaleDateString('en-US', { weekday: 'long' });
+document.querySelector('.dayName').textContent = dayName;
 }
 
 updateTime();
